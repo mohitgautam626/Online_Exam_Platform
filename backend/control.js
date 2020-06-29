@@ -173,4 +173,16 @@ app.post('/test_register',urlencodedParser,(req,res)=>{
   })
 })
 
+app.post('/answers',urlencodedParser,(req,res)=>{
+  var item=req.body;
+  connection.query("SELECT * FROM response WHERE Subject_Code='"+subcode+"' AND Reg_No='"+reg+"'",(err,result,field)=>{
+    if(err){
+      return res.send(err);
+    }
+    else{
+      return res.send(result);
+    }
+  })
+})
+
 app.listen(5000);
