@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
-import {Redirect,Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 class Timer extends Component{
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state={
       hour:0,
       min:0,
@@ -29,10 +29,11 @@ class Timer extends Component{
     this.changeTime();
     setInterval(()=>{this.changeTime()},1000);
   }
-  render(){
+  render(props){
     const {hour,min,sec}=this.state;
+    const {subcode}=this.props;
     if(hour<0 && min<0 && sec<0){
-      return <Redirect to="/endpaper"/>
+      return <Redirect to={`/endpaper?Subject_Code=${subcode}`}/>
     }
     else{
     return(

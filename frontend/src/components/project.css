@@ -402,3 +402,17 @@ div.disabled{
   margin-top:2px;
   font-size:16px;
 }
+.end-div{
+  background-color:white;
+  opacity:0.8;
+  text-align:center;
+  margin-top:120px;
+  border:5px dashed black;
+}
+.end-h1{
+  font-family:'Notable', sans-serif;
+  font-size:40px;
+}
+.end-td2{
+  font-family:'Orbitron', sans-serif;
+}

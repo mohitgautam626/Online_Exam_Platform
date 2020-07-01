@@ -9,6 +9,7 @@ import Marks from './components/mark';
 import Profile from './components/profile';
 import Logout from './components/logout';
 import Med from './components/mediator';
+import EndPaper from './components/endpaper';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 class App extends Component{
@@ -18,7 +19,7 @@ class App extends Component{
       <div className="container-fluid header">
         <div className="row">
         <div className="col-sm-1 header-div">
-        <img src={require('./components/images/4.png')} height={'80'} width={'80'}/>
+        <img src={require('./components/images/4.png')} height={'80'} width={'80'} alt="bg"/>
       </div>
       <div className="col-sm-6">
         <h1><b>Online EXAM-nation Platform</b></h1>
@@ -35,6 +36,7 @@ class App extends Component{
       <Route path="/marks" component={Marks}/>
       <Route path="/logout" component={Logout}/>
       <Route path="/med" component={Med}/>
+      <Route path="/endpaper" component={EndPaper}/>
       </Switch>
       </Router>
       </>

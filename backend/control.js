@@ -185,4 +185,28 @@ app.post('/answers',urlencodedParser,(req,res)=>{
   })
 })
 
+app.post('/answers2',urlencodedParser,(req,res)=>{
+  var item=req.body;
+  connection.query("SELECT * FROM exam_papers WHERE Subject_Code='"+subcode+"'",(err,result,field)=>{
+    if(err){
+      return res.send(err);
+    }
+    else{
+      return res.send(result);
+    }
+  })
+})
+
+app.post('/answers3',urlencodedParser,(req,res)=>{
+  var item=req.body;
+  connection.query(`SELECT * FROM ${subcode}_ans`,(err,result,field)=>{
+    if(err){
+      return res.send(err);
+    }
+    else{
+      return res.send(result);
+    }
+  })
+})
+
 app.listen(5000);

@@ -379,7 +379,7 @@ class Home extends Component{
       Time Remaining:
       </div>
       <div className="time3">
-      <b><Timer/></b>
+      <b><Timer subcode={sub_code}/></b>
       </div>
       </div>
       </div>
